@@ -1,0 +1,12 @@
+[Unit]
+Description=Gem Server
+
+[Service]
+WorkingDirectory=/opt/gem_server/geminabox
+ExecStart=/usr/local/bin/unicorn -p 8080
+EnvironmentFile=/opt/gem_server/geminabox/environments
+User=gem_server
+Group=gem_server
+
+[Install]
+WantedBy=multi-user.target
